@@ -256,7 +256,20 @@ Therefore to get an appropriate number of the interval we have to divide 835 by 
 ## 206.2
 </code></pre>
 
-<p>This is as much as I have at the moment, the rest is missing.</p>
+<p>The next task involves imputing the missing values.
+First, let us find the number of rows with NAs.</p>
+
+<pre><code class="r">complete_data &lt;- complete.cases(data)  # Clear the data out of the rows containing NAs
+num_row_NA &lt;- nrow(data) - sum(complete_data)
+num_row_NA
+</code></pre>
+
+<pre><code>## [1] 2304
+</code></pre>
+
+<p>As we can see above, there are 2304 rows with missing values. </p>
+
+<p>The rest of the assignment is missing.</p>
 
 </body>
 

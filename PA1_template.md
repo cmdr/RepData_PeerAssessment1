@@ -102,4 +102,25 @@ mean_num_steps_interval[max_interval]
 ```
 
 
-This is as much as I have at the moment, the rest is missing.
+The next task involves imputing the missing values.
+First, let us find the number of rows with NAs.
+
+
+```r
+complete_data <- complete.cases(data)  # Clear the data out of the rows containing NAs
+num_row_NA <- nrow(data) - sum(complete_data)
+num_row_NA
+```
+
+```
+## [1] 2304
+```
+
+
+As we can see above, there are 2304 rows with missing values. 
+
+The rest of the assignment is missing.
+
+
+
+
