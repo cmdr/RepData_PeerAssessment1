@@ -1,13 +1,13 @@
 Reproducible Research, Peer Assessment 1
 ========================================================
 
-First, we will load the data.
+First, we load the data.
 
 ```{r}
 data <- read.csv("activity.csv")
 ```
 
-Then we split the data by days and then sum the number of steps in each day.
+Then we split the data by days and sum the number of steps in each day.
 
 ```{r}
 data_day <- split(data, data$date)
@@ -28,7 +28,7 @@ mean_num_per_day <- sum(sum_num_steps)/length(sum_num_steps)
 summary(sum_num_steps)
 ```
 
-So the mean equals 9350 whereas the median 10400.
+So, the mean equals 9350 whereas the median 10400.
 
 The next point task is to analyze the average daily activity pattern.
 Firstly, we split the data according to intervals.
@@ -37,10 +37,10 @@ data_interval <- split(data, data$interval)
 mean_num_steps_interval <- sapply(data_interval, function(x) mean(x[, c("steps")], na.rm = TRUE)) # NAs are removed
 ```
 
-Secondly, we plot a time series of the 5-minute interval and the average number of steps taken, averaged across all days. 
+Secondly, we plot a time series of the 5-minute intervals and the average number of steps taken, averaged across all days. 
 
 ```{r}
-plot(mean_num_steps_interval, xlab = "Interval", ylab = "Number of steps", type = "l", xaxt = "n")
+plot(mean_num_steps_interval, xlab = "Interval", ylab = "Number of steps (averaged across all days)", type = "l", xaxt = "n")
 axis(1, at = seq(from = 0, to = 300, by = 50), labels = as.character(seq(from = 0, to = 300, by = 50)) )
 ```
 
@@ -74,6 +74,7 @@ num_row_NA
 As we can see above, there are 2304 rows with missing values. 
 
 The rest of the assignment is missing.
+
 
 
 

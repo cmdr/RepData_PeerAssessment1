@@ -1,7 +1,7 @@
 Reproducible Research, Peer Assessment 1
 ========================================================
 
-First, we will load the data.
+First, we load the data.
 
 
 ```r
@@ -9,7 +9,7 @@ data <- read.csv("activity.csv")
 ```
 
 
-Then we split the data by days and then sum the number of steps in each day.
+Then we split the data by days and sum the number of steps in each day.
 
 
 ```r
@@ -45,7 +45,7 @@ summary(sum_num_steps)
 ```
 
 
-So the mean equals 9350 whereas the median 10400.
+So, the mean equals 9350 whereas the median 10400.
 
 The next point task is to analyze the average daily activity pattern.
 Firstly, we split the data according to intervals.
@@ -61,8 +61,8 @@ Secondly, we plot a time series of the 5-minute interval and the average number 
 
 
 ```r
-plot(mean_num_steps_interval, xlab = "Interval", ylab = "Number of steps", type = "l", 
-    xaxt = "n")
+plot(mean_num_steps_interval, xlab = "Interval", ylab = "Number of steps (averaged across all days)", 
+    type = "l", xaxt = "n")
 axis(1, at = seq(from = 0, to = 300, by = 50), labels = as.character(seq(from = 0, 
     to = 300, by = 50)))
 ```
@@ -120,6 +120,7 @@ num_row_NA
 As we can see above, there are 2304 rows with missing values. 
 
 The rest of the assignment is missing.
+
 
 
 
